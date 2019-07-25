@@ -1,0 +1,165 @@
+:root{
+    --original-white:rgba(250,250,250 ,1);
+    --original-gray:rgba(158,158,158 ,1);
+    --original-black:rgba(33,33,33 ,1);
+    --Dark:rgba(27,40,54,1);
+    --deep-dark:rgba(61,84,102,1);
+    --light-dark:rgba(96,125,139 ,1);
+}
+
+textarea{
+    font-family:"Roboto", "Yu Gothic Medium", YuGothic, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif !important;
+}
+
+html.dark .bg-color-twitter-white{
+    background-color:var(--light-dark) !important;
+}
+
+.js-compose-text{
+    color:var(--original-white) !important;
+}
+
+.position-rel.compose-text-container{
+    background-color:var(--light-dark) !important;
+}
+
+.js-in-reply-to:not(.is-hidden) ~ .position-rel.compose-text-container{
+    border-top: thin solid var(--original-white);
+}
+
+html.dark .drawer.wide{
+    width: 300px;
+    left: -300px;
+}
+
+.app-content.is-open{
+    transform: translateX(300px) !important;
+    margin-right: 300px !important;
+}
+
+.js-tweet-text{
+    color:var(--original-white);
+}
+
+.js-modal-panel{
+    background-color: var(--Dark) !important;
+}
+
+.nbfc > *{
+    color:var(--original-white) !important;
+    text-shadow:none !important;
+}
+
+.username{
+    color:rgba(224,224,224 ,1) !important;
+}
+
+.list-account:hover{
+    background-color:var(--light-dark) !important;
+}
+
+.l-column{
+    background-color: var(--Dark) !important;
+}
+
+.js-modal-panel .js-stream-item-content{
+    background-color:var(--Dark) !important;
+}
+
+.column-heading{
+    color:var(--original-white);
+}
+
+.attribution{
+    color:var(--original-gray);
+}
+
+.js-title{
+    color:var(--original-white);
+}
+
+.js-social-proof{
+    background: var(--deep-dark) !important;
+    border-bottom: thin var(--original-white) solid !important;
+}
+
+.js-social-proof p {
+    color: white;
+}
+
+.prf-actions{
+    background: var(--deep-dark);
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.prf-meta{
+    background: var(--deep-dark) !important;
+    border-bottom: thin var(--original-white) solid !important;
+}
+
+.prf-stats strong{
+    color: var(--original-white) !important;
+}
+
+.js-item-launch:hover i,.js-item-launch:hover span{
+    color:rgba(207,216,220 ,1) !important;
+}
+
+.pull-left{
+    color:var(--original-white);
+}
+
+.js-column-scroller{
+    background-color:var(--Dark) !important;
+}
+
+.js-quote-tweet-holder{
+    background-color:var(--light-dark) !important;
+}
+
+.js-quote-detail{
+    background-color:rgba(120,144,156 ,1);
+}
+
+.js-quote-detail a{
+    color:rgba(179,229,252 ,1) !important;
+}
+
+.tweet-body .js-quote-detail{
+    background-color:var(--deep-dark);
+}
+
+.color-twitter-dark-black{
+    background-color: var(--deep-dark) !important;
+}
+
+.mdl{
+    background-color: var(--Dark) !important;
+}
+
+.mdl-inner{
+    background-color: var(--Dark) !important;
+    border-bottom: thin var(--original-white) solid;
+    color: var(--original-white);
+}
+
+.js-dropdown-content li a{
+    color: var(--original-white) !important;
+}
+
+.js-modal-content .inline-block span,.js-modal-content .js-from-username span{
+    color: var(--original-white);
+}
+
+.js-in-reply-to {
+    background-color: var(--light-dark) !important;
+}
+
+.js-media-native-video {
+    width: 100% !important;
+}
+
+.TwitterCard .PollXChoice-optionContainer .PollXChoice-choice {
+    white-space: unset !important;
+}
