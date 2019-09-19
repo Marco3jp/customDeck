@@ -7,10 +7,6 @@
     --light-dark: rgba(96, 125, 139, 1);
 }
 
-textarea {
-    font-family: "Roboto", "Yu Gothic Medium", YuGothic, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif !important;
-}
-
 html.dark .bg-color-twitter-white {
     background-color: var(--light-dark) !important;
 }
