@@ -28,11 +28,6 @@ html.dark .drawer.wide {
     left: -300px;
 }
 
-.app-content.is-open {
-    transform: translateX(300px) !important;
-    margin-right: 300px !important;
-}
-
 .js-tweet-text {
     color: var(--original-white);
 }
