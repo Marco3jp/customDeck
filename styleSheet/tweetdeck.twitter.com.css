@@ -150,7 +150,3 @@ html.dark .drawer.wide {
 .js-media-native-video {
     width: 100% !important;
 }
-
-.TwitterCard .PollXChoice-optionContainer .PollXChoice-choice {
-    white-space: unset !important;
-}
