@@ -31,18 +31,14 @@
         }, 30000); // 30秒ごとに更新
     }
 
+    function displayTimeoutModal() {
+
+    }
+
     function displayAlertModal(msgs) {
-        let wrapper = document.createElement("div");
+        let wrapper = createModalWrapper();
         let alertModal = document.createElement("div");
         let buttonWrapper = document.createElement("div");
-
-        wrapper.style.height = "100vh";
-        wrapper.style.width = "100vw";
-        wrapper.style.background = "rgba(16, 23, 30 ,1)";
-        wrapper.style.position = "fixed";
-        wrapper.style.top = "0";
-        wrapper.style.left = "0";
-        wrapper.style.zIndex = "10000";
 
         alertModal.style.height = "150px";
         alertModal.style.width = "500px";
@@ -88,6 +84,18 @@
         alertModal.appendChild(buttonWrapper);
         wrapper.appendChild(alertModal);
         document.body.appendChild(wrapper);
+    }
+
+    function createModalWrapper() {
+        let wrapper = document.createElement("div");
+        wrapper.style.height = "100vh";
+        wrapper.style.width = "100vw";
+        wrapper.style.background = "rgba(16, 23, 30 ,1)";
+        wrapper.style.position = "fixed";
+        wrapper.style.top = "0";
+        wrapper.style.left = "0";
+        wrapper.style.zIndex = "10000";
+        return wrapper
     }
 
     function createButtonElm(msg, clickCallback) {
