@@ -29,12 +29,26 @@
         localStorage.setItem("manager_latestTimestamp", getCurrentUNIXTime().toString());
         setInterval(() => {
             localStorage.setItem("manager_latestTimestamp", getCurrentUNIXTime().toString());
+            if (openingTime < getCurrentUNIXTime() - 180) { // 180sec = 3min
+                displayTimeoutModal();
+                setTimeout(() => {
+                    window.close()
+                }, 5000)
+            }
         }, 30000); // 30秒ごとに更新
     }
 
     function displayTimeoutModal() {
         let wrapper = createModalWrapper();
-
+        let modal = createAlertModal("100px", "500px");
+        let msgElements = createParagraphElms(["3分以上見てたので閉じてあげますね(5秒後に自動で閉じます)"]);
+        let closeWindowButton = createButtonElm("手動で閉じる", closeWindow);
+        msgElements.forEach(mesElement => {
+            modal.appendChild(mesElement);
+        });
+        modal.appendChild(closeWindowButton);
+        wrapper.appendChild(modal);
+        document.body.appendChild(wrapper);
     }
 
     function displayAlertModal(msgs) {
