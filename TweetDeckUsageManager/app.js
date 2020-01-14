@@ -45,16 +45,7 @@
         buttonWrapper.style.justifyContent = "space-evenly";
         buttonWrapper.style.marginTop = "30px";
 
-        let msgElements = [];
-
-        msgs.forEach(msg => {
-            let msgParagraph = document.createElement("p");
-            msgParagraph.style.textAlign = "center";
-            msgParagraph.style.fontSize = "16px";
-            msgParagraph.style.color = "rgba(250, 250, 250,1)";
-            msgParagraph.textContent = msg;
-            msgElements.push(msgParagraph);
-        });
+        let msgElements = createParagraphElms(msgs);
 
         let closeWindowButton = createButtonElm("ページを閉じる", () => {
             window.close();
@@ -109,5 +100,20 @@
         button.type = "button";
         button.addEventListener("click", clickCallback);
         return button;
+    }
+
+    function createParagraphElms(msgs) {
+        let msgElements = [];
+
+        msgs.forEach(msg => {
+            let msgParagraph = document.createElement("p");
+            msgParagraph.style.textAlign = "center";
+            msgParagraph.style.fontSize = "16px";
+            msgParagraph.style.color = "rgba(250, 250, 250,1)";
+            msgParagraph.textContent = msg;
+            msgElements.push(msgParagraph);
+        });
+
+        return msgElements;
     }
 })();
