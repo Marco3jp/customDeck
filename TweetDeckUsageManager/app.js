@@ -47,9 +47,7 @@
 
         let msgElements = createParagraphElms(msgs);
 
-        let closeWindowButton = createButtonElm("ページを閉じる", () => {
-            window.close();
-        });
+        let closeWindowButton = createButtonElm("ページを閉じる", closeWindow);
 
         /**
          let closeModalButton = createButtonElm("モーダルを閉じる", ()=>{
@@ -115,5 +113,9 @@
         });
 
         return msgElements;
+    }
+
+    function closeWindow() {
+        window.close();
     }
 })();
