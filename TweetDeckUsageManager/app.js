@@ -32,19 +32,14 @@
     }
 
     function displayTimeoutModal() {
+        let wrapper = createModalWrapper();
 
     }
 
     function displayAlertModal(msgs) {
         let wrapper = createModalWrapper();
-        let alertModal = document.createElement("div");
+        let alertModal = createAlertModal("150px", "500px");
         let buttonWrapper = document.createElement("div");
-
-        alertModal.style.height = "150px";
-        alertModal.style.width = "500px";
-        alertModal.style.margin = "auto";
-        alertModal.style.inset = "0";
-        alertModal.style.position = "absolute";
 
         buttonWrapper.style.display = "flex";
         buttonWrapper.style.justifyContent = "space-evenly";
@@ -96,6 +91,16 @@
         wrapper.style.left = "0";
         wrapper.style.zIndex = "10000";
         return wrapper
+    }
+
+    function createAlertModal(height, width) {
+        let alertModal = document.createElement("div");
+        alertModal.style.height = height;
+        alertModal.style.width = width;
+        alertModal.style.margin = "auto";
+        alertModal.style.inset = "0";
+        alertModal.style.position = "absolute";
+        return alertModal;
     }
 
     function createButtonElm(msg, clickCallback) {
