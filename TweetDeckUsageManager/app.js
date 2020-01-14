@@ -12,9 +12,10 @@
 (function () {
     'use strict';
     const timestamp = localStorage.getItem("manager_latestTimestamp");
-    const currentTime = Math.round(new Date().getTime() / 1000);
-    if (timestamp !== null && timestamp > currentTime - 1800) { // 1800sec = 30min
-        const timer = 1800 - (currentTime - timestamp);
+    const openingTime = getCurrentUNIXTime();
+
+    if (timestamp !== null && timestamp > openingTime - 1800) { // 1800sec = 30min
+        const timer = 1800 - (openingTime - timestamp);
         displayAlertModal(["前回の閲覧から30分経過していません。",
             "また、デフォルトではモーダルを閉じることはできません。",
             "Tweetしたいだけなら、以下のIntentをご利用ください。",
@@ -25,9 +26,9 @@
     }
 
     function startTimer() {
-        localStorage.setItem("manager_latestTimestamp", (Math.round((new Date()).getTime() / 1000)).toString());
+        localStorage.setItem("manager_latestTimestamp", getCurrentUNIXTime().toString());
         setInterval(() => {
-            localStorage.setItem("manager_latestTimestamp", (Math.round((new Date()).getTime() / 1000)).toString());
+            localStorage.setItem("manager_latestTimestamp", getCurrentUNIXTime().toString());
         }, 30000); // 30秒ごとに更新
     }
 
@@ -117,5 +118,9 @@
 
     function closeWindow() {
         window.close();
+    }
+
+    function getCurrentUNIXTime() {
+        return Math.round((new Date()).getTime() / 1000)
     }
 })();
