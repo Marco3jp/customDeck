@@ -15,7 +15,7 @@
     const currentTime = Math.round(new Date().getTime() / 1000);
     if (timestamp !== null && timestamp > currentTime - 1800) { // 1800sec = 30min
         const timer = 1800 - (currentTime - timestamp);
-        displayAlartModal(["前回の閲覧から30分経過していません。",
+        displayAlertModal(["前回の閲覧から30分経過していません。",
             "また、デフォルトではモーダルを閉じることはできません。",
             "Tweetしたいだけなら、以下のIntentをご利用ください。",
             `あと${(timer > 60 ? Math.floor(timer / 60) + "分" : "") + timer % 60 + "秒"}くらいです`
@@ -31,9 +31,9 @@
         }, 30000); // 30秒ごとに更新
     }
 
-    function displayAlartModal(msgs) {
+    function displayAlertModal(msgs) {
         let wrapper = document.createElement("div");
-        let alartModal = document.createElement("div");
+        let alertModal = document.createElement("div");
         let buttonWrapper = document.createElement("div");
 
         wrapper.style.height = "100vh";
@@ -44,11 +44,11 @@
         wrapper.style.left = "0";
         wrapper.style.zIndex = "10000";
 
-        alartModal.style.height = "150px";
-        alartModal.style.width = "500px";
-        alartModal.style.margin = "auto";
-        alartModal.style.inset = "0";
-        alartModal.style.position = "absolute";
+        alertModal.style.height = "150px";
+        alertModal.style.width = "500px";
+        alertModal.style.margin = "auto";
+        alertModal.style.inset = "0";
+        alertModal.style.position = "absolute";
 
         buttonWrapper.style.display = "flex";
         buttonWrapper.style.justifyContent = "space-evenly";
@@ -81,12 +81,12 @@
             window.close();
         });
 
-        msgElements.forEach(msgParagraph => alartModal.appendChild(msgParagraph));
+        msgElements.forEach(msgParagraph => alertModal.appendChild(msgParagraph));
         buttonWrapper.appendChild(closeWindowButton);
         // buttonWrapper.appendChild(closeModalButton);
         buttonWrapper.appendChild(openIntentPageButton);
-        alartModal.appendChild(buttonWrapper);
-        wrapper.appendChild(alartModal);
+        alertModal.appendChild(buttonWrapper);
+        wrapper.appendChild(alertModal);
         document.body.appendChild(wrapper);
     }
 
