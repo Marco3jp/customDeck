@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Quick Tweet",
+  "author": "Marco",
+  "version": "0.2.2",
+  "description": "You can tweet without TweetDeck. XD",
+  "permissions": [
+    "contextMenus",
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "icons": {
+    "16": "icon-bitty.png"
+  },
+  "browser_action": {
+    "default_title": "Display tweet page"
+  }
+}

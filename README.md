@@ -1,4 +1,14 @@
 # customDeck
+## quick-tweet
+TweetDeckのカスタムではないが、単にサイトをシェアしたい、一言ツイートしたいときにTweetDeckを開く必要がなくなるChromeExtension。
+
+### 要求
+- Chromium系ブラウザ
+- [ここ](https://about.twitter.com/ja/company/brand-resources.html) から適当に アイコンを取ってきて、 `./dist/` に `icon-bitty.png` という名前で置くこと
+
+### 使い方とか
+ブラウザの拡張機能画面から開発者モードをオンにして、落としたディレクトリの `./dist` を指定する。わからない人は使わないでね。
+
 ## StyleSheet
 TweetDeck(BetterTweetDeck導入済み)を"Dark"で使っている人のためのカスタムCSS。
 
