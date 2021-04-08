@@ -155,3 +155,8 @@ html.dark .drawer.wide {
     background-color: unset !important;
     box-shadow: unset !important;
 }
+
+html.dark .scroll-styled-h::-webkit-scrollbar-track,
+html.dark .scroll-styled-v::-webkit-scrollbar-track {
+    border-left: unset;
+}
