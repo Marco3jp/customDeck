@@ -150,3 +150,8 @@ html.dark .drawer.wide {
 .js-media-native-video {
     width: 100% !important;
 }
+
+.emoji-mart-emoji:hover, .emoji-mart-emoji:focus {
+    background-color: unset !important;
+    box-shadow: unset !important;
+}
