@@ -156,7 +156,21 @@ html.dark .drawer.wide {
     box-shadow: unset !important;
 }
 
+html.dark .scroll-styled-h::-webkit-scrollbar,
+html.dark .scroll-styled-v::-webkit-scrollbar {
+    width: 4px;
+}
+
 html.dark .scroll-styled-h::-webkit-scrollbar-track,
 html.dark .scroll-styled-v::-webkit-scrollbar-track {
-    border-left: unset;
+   border-left: unset;
+}
+
+html.dark .scroll-alt::-webkit-scrollbar-thumb, html.dark .scroll-alt::-webkit-scrollbar-thumb:hover {
+    background-color: var(--original-white);
+}
+
+html.dark .scroll-styled-h::-webkit-scrollbar-thumb,
+html.dark .scroll-styled-v::-webkit-scrollbar-thumb {
+    border-radius: 0;
 }
