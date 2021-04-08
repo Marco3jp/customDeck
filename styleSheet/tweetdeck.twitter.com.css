@@ -135,7 +135,6 @@ html.dark .mdl-column .js-right-column {
 
 .mdl-inner {
     background-color: var(--Dark) !important;
-    border-bottom: thin var(--original-white) solid;
     color: var(--original-white);
 }
 
