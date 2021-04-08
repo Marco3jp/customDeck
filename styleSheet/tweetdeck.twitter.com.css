@@ -53,6 +53,10 @@ html.dark .drawer.wide {
     background-color: var(--Dark) !important;
 }
 
+html.dark .mdl-column .js-right-column {
+    overflow-x: hidden;
+}
+
 .js-modal-panel .js-stream-item-content {
     background-color: var(--Dark) !important;
 }
