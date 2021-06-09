@@ -177,3 +177,7 @@ html.dark .scroll-styled-h::-webkit-scrollbar-thumb,
 html.dark .scroll-styled-v::-webkit-scrollbar-thumb {
     border-radius: 0;
 }
+
+[btd-render-cards='true'] .js-tweet[btd-card='summary_large_image'] .js-card-container {
+    min-height: unset;
+}
