@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         forMeDeck
 // @description  the world won't end
-// @version      2.1
+// @version      2.2
 // @author       Marco
 // @homepage     https://marco.plus
 // @namespace    https://marco.plus
@@ -56,6 +56,11 @@
     /* r-rbxt48はカラムに幅を指定しているクラス */
     .r-rbxt48 {
       width: 320px !important;
+    }
+
+    /* 各カラムの左側のボーダーに見える部分の実装 */
+    section.css-1dbjc4n.r-18u37iz.r-2llsf.r-1ny4l3l > div > div {
+      margin-left: 1px;
     }
 
 /* == ツイートに関する実装 ==  */
