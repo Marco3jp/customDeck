@@ -1,0 +1,17 @@
+{
+  "name": "quick-tweet-v2",
+  "version": "2.0.0",
+  "description": "Tweet current page to X (Twitter) quickly",
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build"
+  },
+  "author": "Marco",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0"
+  }
+}
